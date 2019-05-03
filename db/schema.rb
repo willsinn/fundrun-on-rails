@@ -49,9 +49,9 @@ ActiveRecord::Schema.define(version: 2019_05_03_174646) do
   end
 
   create_table "participations", force: :cascade do |t|
-    t.boolean "following"
-    t.boolean "run"
-    t.boolean "volunteer"
+    t.boolean "following", default: false
+    t.boolean "run", default: false
+    t.boolean "volunteer", default: false
     t.integer "user_id"
     t.integer "marathon_id"
     t.datetime "created_at", null: false

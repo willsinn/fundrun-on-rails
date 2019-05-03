@@ -27,9 +27,16 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to users_path
   end
+
+  def follow
+    @user = User.find(params[:id])
+
+    byebug
+  end
+
   private
-    def user_params
-      params.require(:user).permit(:name, :age)
-    end
+  def user_params
+    params.require(:user).permit(:name, :age)
+  end
 
 end
