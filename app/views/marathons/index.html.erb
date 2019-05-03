@@ -1,6 +1,6 @@
 <h1>Marathons Index</h1>
 <ul>
-  <%@Marathons.each do |marathon|%>
+  <%@marathons.each do |marathon|%>
     <li><%=link_to marathon.name, user_path(marathon)%></li>
   <%end%>
 </ul>
