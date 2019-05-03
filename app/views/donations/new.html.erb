@@ -1,2 +1,11 @@
-<h1>Donations#new</h1>
-<p>Find me in app/views/donations/new.html.erb</p>
+<h1>Make a Donation</h1>
+
+<%= form_for @donation do |f| %>
+  <%= f.label :charity %>
+  <%= f.collection_select(:fund_id, Fund.all, :id, :name) %>
+  <%= f.label :amount %>
+  <%= f.number_field :amount %>
+  <%= f.submit :Donate %>
+<% end %>
+
+<button><%= link_to "Charities", funds_path %></button>
