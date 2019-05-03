@@ -1,2 +1,10 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>New User Form</h1>
+<%= form_for @user do |f|%>
+  <%= f.label 'enter name'%>
+  <%= f.text_field 'name'%>
+<br>
+  <%= f.label 'enter age'%>
+  <%= f.number_field 'age'%>
+<br>
+  <%= f.submit 'add user'%>
+<%end%>
