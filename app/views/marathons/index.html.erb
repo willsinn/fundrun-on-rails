@@ -1,2 +1,6 @@
-<h1>Marathons#index</h1>
-<p>Find me in app/views/marathons/index.html.erb</p>
+<h1>Marathons Index</h1>
+<ul>
+  <%@marathons.each do |marathon|%>
+    <li><%=link_to marathon.name, user_path(marathon)%></li>
+  <%end%>
+</ul>

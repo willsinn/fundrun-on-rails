@@ -6,5 +6,6 @@
   <%= f.label 'enter age'%>
   <%= f.number_field 'age'%>
 <br>
-  <%= f.submit 'add user'%>
+  <%= f.submit 'save'%>
 <%end%>
+<%= button_to 'delete user', @user, method: :delete%>
