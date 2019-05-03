@@ -1,0 +1,11 @@
+<h1>New User Form</h1>
+<%= form_for @user do |f|%>
+  <%= f.label 'enter name'%>
+  <%= f.text_field 'name'%>
+<br>
+  <%= f.label 'enter age'%>
+  <%= f.number_field 'age'%>
+<br>
+  <%= f.submit 'save'%>
+<%end%>
+<%= button_to 'delete user', @user, method: :delete%>
