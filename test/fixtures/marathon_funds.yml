@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  marathin_id: 1
+  fund_id: 1
+  marathon: one
+  fund: one
+
+two:
+  marathin_id: 1
+  fund_id: 1
+  marathon: two
+  fund: two
