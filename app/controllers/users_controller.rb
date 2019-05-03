@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
+    redirect_to @user
   end
   private
     def user_params
