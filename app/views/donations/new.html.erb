@@ -5,5 +5,7 @@
   <%= f.collection_select(:fund_id, Fund.all, :id, :name) %>
   <%= f.label :amount %>
   <%= f.number_field :amount %>
-  <%= f.submit :donate %>
+  <%= f.submit :Donate %>
 <% end %>
+
+<button><%= link_to "Charities", funds_path %></button>
