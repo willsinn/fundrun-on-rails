@@ -1,29 +1,27 @@
 class ParticipationsController < ApplicationController
-  def following
 
-    if button is clicked
-      following = !following
-    end
-  end
-
-  def run
-
-  end
-
-  def volunteer
-
-  end
-
-  def update
-    # byebug
+def show
+  # @participation = Participation.find_by()
+  @var = Participation.follow(user_id, meeting_id)
+end
 
 
+def new
+  @participation = Participation.new
+end
+# call in model
+def create
+  # byebug
+  # @marathon = Marathon.find(params[:id])
+  @participation = Participation.create(user_id: params[:user_id], marathon_id: params[:marathon_id])
 
-  end
+  # redirect_to @marathon
+end
 
-  private
 
-  def participation_params
-    params.require(:user).permit(:following, :fun, :volunteer)
-  end
+private
+
+def user_params
+
+
 end

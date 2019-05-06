@@ -6,4 +6,10 @@ class MarathonsController < ApplicationController
   def show
     @marathon = Marathon.find(params[:id])
   end
+
+  def follow
+
+
+    render :show
+  end
 end

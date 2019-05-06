@@ -1,6 +1,4 @@
 <h1>Marathons#show</h1>
 <p>Find me in app/views/marathons/show.html.erb</p>
 <%= @marathon.name %>
-<%= button_to "Follow", participation_update_path, method: :patch %>
-<%= button_to "Run", marathon_path, method: :post %>
-<%= button_to "Volunteer", marathon_path, method: :post %>
+<button><%= link_to "Follow", follow_path %></button>

@@ -30,9 +30,8 @@ ActiveRecord::Schema.define(version: 2019_05_03_174646) do
   end
 
   create_table "marathon_funds", force: :cascade do |t|
-    t.integer "marathin_id"
-    t.integer "fund_id"
     t.integer "marathon_id"
+    t.integer "fund_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["fund_id"], name: "index_marathon_funds_on_fund_id"
@@ -42,16 +41,15 @@ ActiveRecord::Schema.define(version: 2019_05_03_174646) do
   create_table "marathons", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.integer "date"
+    t.datetime "date"
     t.string "m_type"
+    t.string "img_link"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "participations", force: :cascade do |t|
-    t.boolean "following", default: false
-    t.boolean "run", default: false
-    t.boolean "volunteer", default: false
     t.integer "user_id"
     t.integer "marathon_id"
     t.datetime "created_at", null: false
