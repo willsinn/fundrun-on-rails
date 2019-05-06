@@ -1,3 +1,45 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.nav_conts_wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+#navbarsExampleDefault {
+  width: 400px;
+  float: right;
+
+}
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+.nav-item a {
+  color: white;
+}
+
+.sub-title {
+  padding: 100px 0 20px 0;
+  font-weight: bold;
+}
+.mara_info img {
+  width: 100%;
+}
+
+.mara_info ul {
+  padding-top: 20px;
+}
+
+.mara_info li {
+  padding: 5px 0;
+}
+
+.detail {
+  margin-bottom: 3px;
+  font-weight: bold;
+}
