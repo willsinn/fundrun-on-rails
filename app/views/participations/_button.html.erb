@@ -1,0 +1,13 @@
+<%#= form_for @participation do |f| %>
+  <%#= f.hidden_field :user_id, value: session[:user_id] %>
+  <%#= f.hidden_field :marathon_id, value: @marathon.id %>
+  <%#= f.submit "Follow" %>
+<%# end %>
+
+<% if following?  %>
+  <%# byebug %>
+  <%= button_to "Unfollow", unfollow_path, method: :delete%>
+<% else %>
+  <%# byebug %>
+  <%= button_to "Follow", follow_path, method: :create%>
+<% end %>
