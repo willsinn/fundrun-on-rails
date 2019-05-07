@@ -1,0 +1,9 @@
+
+<%= form_for @participation do |f| %>
+  <%= f.hidden_field :user_id, value: 1 %>
+  <%# user.id needs to be an user object id %>
+
+  <%= f.hidden_field :marathon_id, value: 1 %>
+  <%#  marathon.id needs to be the current marathon you're trying to associate %>
+  <%= f.submit "Follow" %>
+<% end  %>

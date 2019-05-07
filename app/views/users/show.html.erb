@@ -1,4 +1,10 @@
-<h1><%=@user.name%>'s page</h1>
-age:<%= @user.age %>
+<div class="jumbotron ctr-text">
+  <h1><%=@user.name%>'s page</h1>
+  age:<%= @user.age %>
 
-<%= button_to 'edit user', edit_user_path , method: :get%>
+  <%= button_to 'edit user', edit_user_path , method: :get%>
+  <% @participations.where(user_id: @user).each do |pt| %>
+    <%= pt.marathon.name %>
+  <%end%>
+
+</div>

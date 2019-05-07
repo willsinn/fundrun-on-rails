@@ -32,4 +32,10 @@ class MarathonsController < ApplicationController
     # @marathon = Marathon.find_by(id: @participation.marathon_id)
     redirect_to @marathon
   end
+
+  def follow
+
+
+    render :show
+  end
 end

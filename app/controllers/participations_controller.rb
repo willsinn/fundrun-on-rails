@@ -1,5 +1,6 @@
 class ParticipationsController < ApplicationController
 
+
   def show
     @participation = Participation.find_by(session[:user_id])
     @var = Participation.follow(user_id, meeting_id)

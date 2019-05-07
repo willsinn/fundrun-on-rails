@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @participations = Participation.all
   end
 
   def new
@@ -36,6 +37,7 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+
   def profile
     @user = User.find(params[:id])
     render "profile"
@@ -45,5 +47,6 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :age, :password, :password_confirmation)
     end
+
 
 end
