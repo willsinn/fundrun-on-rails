@@ -1,10 +1,15 @@
 <h1>New User Form</h1>
 <%= form_for @user do |f|%>
-  <%= f.label 'enter name'%>
-  <%= f.text_field 'name'%>
-<br>
-  <%= f.label 'enter age'%>
-  <%= f.number_field 'age'%>
-<br>
-  <%= f.submit 'add user'%>
+  <%= f.label :name %>
+  <%= f.text_field :name%>
+  <br>
+  <%= f.label :age %>
+  <%= f.text_field :age%>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit 'New User'%>
 <%end%>
