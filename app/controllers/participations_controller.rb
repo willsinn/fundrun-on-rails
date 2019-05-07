@@ -1,4 +1,5 @@
 class ParticipationsController < ApplicationController
+
   def show
     @participation = Participation.find_by(session[:user_id])
     @var = Participation.follow(user_id, meeting_id)
@@ -9,13 +10,18 @@ class ParticipationsController < ApplicationController
     # @marathon = Marathon.find(params[:id])
   end
 
-  def create
-    @participation = Participation.create(participation_params)
-    @marathon = Marathon.find_by(id: @participation.marathon_id)
-    # byebug
-    redirect_to @marathon
+  # def create
+  #   @marathon = Marathon.find_by(params[:id])
+  #   @participation = Participation.create(user_id:session[:user_id], marathon_id: @marathon.id )
+  #
+  #
+  #   # @participation = Participation.create(participation_params)
+  #   # @marathon = Marathon.find_by(id: @participation.marathon_id)
+  #   redirect_to @marathon
+  # end
 
-  end
+
+
 
   private
 
