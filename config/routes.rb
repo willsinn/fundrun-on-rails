@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   # post '/participations/create', to: 'participations#create', as: 'new_participation'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  post "/participations/follow", to: "participations#follow", as: "follow"
   resources :funds
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

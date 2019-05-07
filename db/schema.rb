@@ -41,15 +41,16 @@ ActiveRecord::Schema.define(version: 2019_05_03_174646) do
   create_table "marathons", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.datetime "date"
+    t.integer "date"
     t.string "m_type"
-    t.string "img_link"
-    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "participations", force: :cascade do |t|
+    t.boolean "following"
+    t.boolean "run"
+    t.boolean "volunteer"
     t.integer "user_id"
     t.integer "marathon_id"
     t.datetime "created_at", null: false
