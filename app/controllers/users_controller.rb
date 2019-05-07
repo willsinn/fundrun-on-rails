@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+     # @user = User.find(session[:user])
     @users = User.all
   end
 
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
   end
   private
     def user_params
-      params.require(:user).permit(:name, :age, :password)
+      params.require(:user).permit(:name, :age, :password_digest)
     end
 
 end
