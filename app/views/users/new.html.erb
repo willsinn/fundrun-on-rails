@@ -1,10 +1,12 @@
 <h1>New User Form</h1>
-<%= form_for @user do |f|%>
-  <%= f.label 'enter name'%>
-  <%= f.text_field 'name'%>
-<br>
-  <%= f.label 'enter age'%>
-  <%= f.number_field 'age'%>
-<br>
-  <%= f.submit 'add user'%>
+<%= form_tag @user do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name%>
+  <br>
+  <%= label_tag :age %>
+  <%= number_field_tag :age %>
+  <br>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <%=submit_tag 'New User'%>
 <%end%>
