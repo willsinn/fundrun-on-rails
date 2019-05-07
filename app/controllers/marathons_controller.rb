@@ -5,5 +5,6 @@ class MarathonsController < ApplicationController
 
   def show
     @marathon = Marathon.find(params[:id])
+    @participation = Participation.new
   end
 end
