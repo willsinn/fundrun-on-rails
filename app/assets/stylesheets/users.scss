@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*===================================================*/
+/*                  SIGNUP                           */
+/*===================================================*/
 .sign-up-wrapper {
   padding-top: 30px;
   display: flex;
@@ -42,4 +45,70 @@
   color: #fff;
   padding: 6px 15px 8px 15px;
   border-radius: 5px;
+}
+
+/*===================================================*/
+/*                  PROFILE                          */
+/*===================================================*/
+
+.flex-container.row {
+  padding: 100px 0;
+}
+
+.attending.row {
+  background-color: #efefef;
+  padding: 80px 0 100px 0;
+}
+
+.donation.row {
+  padding: 80px 0;
+}
+.profile-wrapper{
+  padding-top: 56px;
+}
+
+.profile-conts-wrapper {
+
+}
+
+.card {
+  height: 200px;
+}
+
+.attending {
+  padding-top: 50px;
+}
+.attending-title {
+  padding: 20px ;
+  margin: 0;
+}
+
+.view-btn {
+  text-align: right;
+}
+
+.donation.container {
+  padding-top: 50px;
+}
+
+.donation-title {
+  padding: 20px;
+}
+
+.user-edit {
+  padding-top: 30px;
+  display: flex;
+}
+
+.edit-btn {
+  display: inline;
+}
+
+.edit-btn-1 {
+  margin-right: 10px;
+}
+
+.edit-btn-2 input{
+  background-color: #ffc30f;
+  border: 0;
 }

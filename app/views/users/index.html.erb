@@ -1,20 +1,100 @@
+<div class="profile-wrapper">
 
-<% if current_user %>
-  <h1>Hello <%= current_user.name %></h1>
-  Age :<%= current_user.age %>
-<% else %>
-  <%= link_to "Sign up", signup_path %> or
-  <%= link_to "Log in", login_path %>
-<% end %>
-<p id='notice'><%= notice %></p>
+  <div class="profile-conts-wrapper">
+    <div class="flex-container row">
+      <div>
+        <% if current_user %>
+          <h1>Hello, <%= current_user.name.capitalize %>!</h1>
+          Age :<%= current_user.age %>
+        <% else %>
+          <%= link_to "Sign up", signup_path %> or
+          <%= link_to "Log in", login_path %>
+        <% end %>
 
-<ul>
-  <%@participations.each do |participation|%>
-    <li><%= participation.marathon.name%></li>
-    <li><%=  participation.marathon.date %></li>
-    <li><%=  participation.marathon.location %></li>
+        <p id='notice'><%= notice %></p>
+        <%= button_to 'edit user', edit_user_path(current_user) , method: :get%>
+      </div>
+    </div>
 
-    <br>
-  <%end%>
-<ul>
-  <%= button_to 'edit user', edit_user_path(current_user) , method: :get%>
+    <div class="attending row">
+      <div class="container">
+        <div class="row attending-title">
+          <h4>Attending Marathons</h4>
+        </div>
+        <div class="row">
+
+          <% if flash[:notice] %>
+            <%= flash[:notice] %>
+          <% else %>
+
+
+          <%@participations.each do |participation|%>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><%= participation.marathon.name%></h5>
+                <p class="card-text"><%=  participation.marathon.date %></p>
+                <p class="card-text"><%=  participation.marathon.location %></p>
+                <div class="view-btn">
+                  <button class="btn btn-warning">
+                    <%= link_to "View", marathon_path(participation.marathon.id), method: :get %>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%end%>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="donation row">
+      <div class="container">
+        <div class="row donation-title">
+          <h4>Donation History</h4>
+        </div>
+        <div class="row">
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Charity</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+<!-- DONATION TABLE NEED TO BE IMPLEMENTED -->
+
+
+
+    </div>
+  </div>
+</div>
+
