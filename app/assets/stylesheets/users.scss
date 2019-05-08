@@ -3,9 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .sign-up-wrapper {
-  padding-top: 20px;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
+}
+
+.font-running{
+  text-align: center;
+  padding: 20px 0 40px 0;
+}
+.fas.fa-running{
+  text-align: center;
+  font-size: 70px;
 }
 
 .form-wrapper h1 {
