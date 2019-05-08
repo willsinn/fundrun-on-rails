@@ -1,27 +1,32 @@
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading title">Upcoming Marathons</h1>
+      </div>
+    </section>
+    <!-- <div class="title-container">
+      <h1 class="title">Upcoming Marathons</h1>
+    </div> -->
 
 
-    <h1 class="title">Upcoming Marathons</h1>
+    <div class="container">
+      <div class="row">
 
-
-  <div class="container">
-    <div class="row">
-
-        <%@marathons.each do |marathon|%>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-img-wrapper">
-              <img src="<%= marathon.img_link %>" alt="">
-            </div>
-            <div class="mara-card-info">
-              <span class="card-name">
-                <%=link_to marathon.name, marathon%>
-              </span>
-              <span><%= marathon.date %></span>
+          <%@marathons.each do |marathon|%>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-img-wrapper">
+                <img src="<%= marathon.img_link %>" alt="">
+              </div>
+              <div class="mara-card-info">
+                <span class="card-name">
+                  <%=link_to marathon.name, marathon%>
+                </span>
+                <span><%= marathon.date %></span>
+              </div>
             </div>
           </div>
-        </div>
-        <%end%>
+          <%end%>
 
 
+      </div>
     </div>
-  </div>

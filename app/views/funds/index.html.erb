@@ -1,9 +1,31 @@
-<h1>Funds Index</h1>
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading title">Run for a Charity!</h1>
+  </div>
+</section>
 
-<ul>
-  <% @funds.each do |fund| %>
-    <li><%= link_to fund.name, fund %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row">
 
-<button><%= link_to "Make a Donation", new_donation_path %></button>
+    <% @funds.each do |fund| %>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-wrapper">
+          <!-- <img src="<%#= fund.img_link %>" alt=""> -->
+        </div>
+        <div class="mara-card-info">
+          <span class="card-name">
+            <%= link_to fund.name, fund %>
+          </span>
+          <span><%= fund.description %></span>
+        </div>
+      </div>
+    </div>
+
+
+      <% end %>
+
+
+    <button><%= link_to "Make a Donation", new_donation_path %></button>
+  </div>
+</div>
