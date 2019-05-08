@@ -1,7 +1,7 @@
-<h1>All Users Listed Here</h1>
+
 <% if current_user %>
-  Logged in as <%= current_user.name %>.
-  <%= link_to "Log out", logout_path %>
+  <h1>Hello <%= current_user.name %></h1>
+  Age :<%= current_user.age %>
 <% else %>
   <%= link_to "Sign up", signup_path %> or
   <%= link_to "Log in", login_path %>
@@ -9,9 +9,11 @@
 <p id='notice'><%= notice %></p>
 <ul>
   <%@participations.each do |participation|%>
-    <li><%=  participation.marathon.name %></li>
+    <li><%= participation.marathon.name%></li>
     <li><%=  participation.marathon.date %></li>
     <li><%=  participation.marathon.location %></li>
+
     <br>
   <%end%>
 <ul>
+  <%= button_to 'edit user', edit_user_path(current_user) , method: :get%>

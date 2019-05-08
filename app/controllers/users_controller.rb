@@ -4,14 +4,15 @@ class UsersController < ApplicationController
   def index
      # @user = User.find(session[:user])
     @users = User.all
+    @user = User.find_by(id: session[:user_id])
     @participations = Participation.all
     @marathons = Marathon.all
   end
 
-  def show
-    @user = User.find(params[:id])
-    @participations = Participation.all
-  end
+  # def show
+  #   @user = User.find(params[:id])
+  #   @participations = Participation.all
+  # end
 
   def new
     @user = User.new
@@ -19,24 +20,24 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    session[:user] = @user.id #added
-    redirect_to @user
+    session[:user_id] = @user.id #added
+    redirect_to profile_path
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.find_by(id: session[:user_id])
   end
 
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-    redirect_to @user
+    redirect_to users_path
   end
 
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to users_path
+    redirect_to login_path
   end
 
 
