@@ -28,7 +28,7 @@ class MarathonsController < ApplicationController
   def create
     current_marathon_id = params.require(:id).to_i
     @marathon = Marathon.find_by(id: current_marathon_id)
-    @participation = Participation.create(user_id: session[:user_id], marathon_id: @marathon.id)
+    @participation = Participation.create(user_id: session[:user_id], marathon_id: current_marathon_id)
     # params.require(:id).to_i
     # @marathons = Marathon.all
     # byebug

@@ -1,7 +1,5 @@
 
 <%= form_for @participation do |f| %>
-<%byebug%>
-
   <%= f.hidden_field :user_id, value: session[:user_id] %>
   <%# user.id needs to be an user object id %>
   <%= f.hidden_field :marathon_id, value: @marathon.id %>
