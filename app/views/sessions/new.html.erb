@@ -1,23 +1,25 @@
-<p id="alert"><%= alert %></p>
-<h1 class="login-title">Login</h1>
-<%= form_tag sessions_path do |form| %>
-  <div class="field field_1">
-    <%= label_tag :name %>
-    <%= text_field_tag :name %>
-  </div>
-  <div class="field field_2">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions">
-      <div class="btn-wrapper">
-        <%= submit_tag "Login" %>
-        <button class="btn btn-warning">
-          <%= link_to "Signup", signup_path %>
-        </button>
+
+<div class="form-wrapper">
+  <div class="form-cont-wrapper">
+    <p id="alert"><%= alert %></p>
+    <h1 class="login-title">Login</h1>
+    <%= form_tag sessions_path do |form| %>
+      <div class="field field_1">
+        <%= label_tag :name %>
+        <%= text_field_tag :name %>
       </div>
-
-      <!-- <button class="btn btn-info">Login</button> -->
+      <div class="field field_2">
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </div>
+      <div class="actions">
+        <div class="btn-wrapper">
+          <%= submit_tag "Login" %>
+          <button class="btn btn-warning">
+            <%= link_to "Signup", signup_path %>
+          </button>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-<% end %>
+</div>

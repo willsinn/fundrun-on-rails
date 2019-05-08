@@ -1,4 +1,4 @@
-<h1>New User Form</h1>
+<h1>edit <%=@user.name%>'s profile</h1>
 <%= form_for @user do |f|%>
   <%= f.label 'enter name'%>
   <%= f.text_field 'name'%>
@@ -6,6 +6,9 @@
   <%= f.label 'enter age'%>
   <%= f.number_field 'age'%>
 <br>
-  <%= f.submit 'save'%>
+  <%= f.label 'change password'%>
+  <%= f.text_field 'password'%>
+<br>
+  <%= f.submit 'save changes'%>
 <%end%>
 <%= button_to 'delete user', @user, method: :delete%>
