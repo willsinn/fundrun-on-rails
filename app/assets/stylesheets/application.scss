@@ -15,26 +15,29 @@
  */
  @import "bootstrap";
 
-
  /*===================================================*/
  /*                  WRAPPERS                         */
  /*===================================================*/
 
-
-.jumbotron {
-  margin: 20px;
-}
-
 .main-wrapper {
-  display: flex;
-  justify-content: center;
   min-height: 1100px;
 }
 
 .conts-wrapper {
-  padding-top: 130px;
+
 }
 
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.form-cont-wrapper p {
+  text-align: center;
+  color: red;
+  padding: 20px 0;
+}
 
 /*===================================================*/
 /*                  NAVBAR                           */
@@ -90,9 +93,14 @@
 /*                  LAYOUT                           */
 /*===================================================*/
 
+.jumbotron {
+  margin-top: 56px;
+  // padding: 5rem 2rem;
+}
 .title {
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
   text-align: center;
+  font-weight: bold;
 }
 .sub-title {
   padding: 0 0 20px 0;
