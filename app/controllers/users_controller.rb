@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: session[:user_id])
     @participations = Participation.all
     @marathons = Marathon.all
+    @marathon = Marathon.find_by(params[:id])
   end
 
   # def show

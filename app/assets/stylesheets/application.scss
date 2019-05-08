@@ -39,6 +39,7 @@
   padding: 20px 0;
 }
 
+
 /*===================================================*/
 /*                  NAVBAR                           */
 /*===================================================*/
@@ -81,7 +82,7 @@
 }
 
 .nav-item a:hover {
-  color: #b5edf4;
+  color: #ffc30f;
   background-color: rgba(0,0,0,0)
 }
 
@@ -93,6 +94,10 @@
 /*                  LAYOUT                           */
 /*===================================================*/
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
 .jumbotron {
   margin-top: 56px;
   // padding: 5rem 2rem;
