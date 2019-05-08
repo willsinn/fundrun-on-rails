@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   delete '/participations/:id', to: 'marathons#destroy', as:'unfollow'
   post '/marathons/:id', to: 'marathons#create', as: 'follow'
   get '/profile', to: 'users#index', as: 'profile'
+
   # post '/participations/create', to: 'participations#create', as: 'new_participation'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

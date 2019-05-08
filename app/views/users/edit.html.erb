@@ -1,14 +1,28 @@
-<h1>edit <%=@user.name%>'s profile</h1>
-<%= form_for @user do |f|%>
-  <%= f.label 'enter name'%>
-  <%= f.text_field 'name'%>
-<br>
-  <%= f.label 'enter age'%>
-  <%= f.number_field 'age'%>
-<br>
-  <%= f.label 'change password'%>
-  <%= f.text_field 'password'%>
-<br>
-  <%= f.submit 'save changes'%>
-<%end%>
-<%= button_to 'delete user', @user, method: :delete%>
+<div class="form-wrapper">
+  <div class="form-cont-wrapper">
+    <h1>Edit <%=@user.name.capitalize%>'s Profile</h1>
+    <div class="sign-up-wrapper">
+      <%= form_for @user do |f|%>
+        <div class="form-row">
+          <div class="form-label col-md-4"><%= f.label 'name'%></div>
+          <div class="form-input col-md-8"><%= f.text_field 'name'%></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-label col-md-4"><%= f.label 'age'%></div>
+          <div class="form-input col-md-8"><%= f.number_field 'age'%></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-label col-md-4"><%= f.label 'password'%></div>
+          <div class="form-input col-md-8"><%= f.text_field 'password'%></div>
+        </div>
+
+        <div class="form-btn user-edit">
+          <div class="edit-btn edit-btn-1"><%= f.submit 'Save Changes'%></div>
+          <%end%>
+          <div class="edit-btn edit-btn-2"><%= button_to 'Delete Account', @user, method: :delete%></div>
+        </div>
+    </div>
+  </div>
+</div>
