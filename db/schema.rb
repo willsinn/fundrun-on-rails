@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2019_05_03_174646) do
 
   create_table "funds", force: :cascade do |t|
     t.string "name"
+    t.string "site"
+    t.string "img_link"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

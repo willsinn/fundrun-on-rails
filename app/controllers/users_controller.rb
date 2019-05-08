@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     #   render :index
     # else
      # @user = User.find(session[:user])
+     @marathon = Marathon.find_by(id: session[:user_id])
     @users = User.all
     @user = User.find_by(id: session[:user_id])
     @marathons = Marathon.all
