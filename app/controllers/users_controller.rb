@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   def index
      # @user = User.find(session[:user])
     @users = User.all
+    @participations = Participation.all
+    @marathons = Marathon.all
   end
 
   def show
