@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-  skip_before_action :authorized?, only: [:new, :create]
+  # skip_before_action :authorized?, only: [:new, :create]
 
   def index
-     # @user = User.find(session[:user])
     @users = User.all
   end
 

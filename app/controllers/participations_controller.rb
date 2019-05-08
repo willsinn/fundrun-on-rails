@@ -23,11 +23,11 @@ class ParticipationsController < ApplicationController
 
 
 
-
-  private
-
-  def participation_params
-    params.require(:participation).permit(:user_id, :marathon_id)
-  end
+  # 
+  # private
+  #
+  # def participation_params
+  #   params.require(:participation).permit(:user_id, :marathon_id)
+  # end
 
 end
