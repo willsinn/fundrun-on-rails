@@ -15,17 +15,87 @@
  */
  @import "bootstrap";
 
+
+ /*===================================================*/
+ /*                  WRAPPERS                         */
+ /*===================================================*/
+
+
 .jumbotron {
   margin: 20px;
 }
 
 .main-wrapper {
-  padding-top: 120px;
   display: flex;
   justify-content: center;
-  // padding-left: 500px;
+  min-height: 1100px;
 }
 
 .conts-wrapper {
+  padding-top: 130px;
+}
 
+
+/*===================================================*/
+/*                  NAVBAR                           */
+/*===================================================*/
+
+.nav_conts_wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+#navbarsExampleDefault {
+  width: 400px;
+  float: right;
+
+}
+
+.navbar {
+  background-color:#17a2b8;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
+.navbar-nav {
+  font-size: 15px;
+  padding-top: 5px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item a:hover {
+  color: #b5edf4;
+  background-color: rgba(0,0,0,0)
+}
+
+.btn.btn-warning a:hover {
+  background-color: rgba(0,0,0,0)
+}
+
+/*===================================================*/
+/*                  LAYOUT                           */
+/*===================================================*/
+
+.title {
+  padding-bottom: 40px;
+  text-align: center;
+}
+.sub-title {
+  padding: 0 0 20px 0;
+  font-weight: bold;
+  text-align: center;
 }
