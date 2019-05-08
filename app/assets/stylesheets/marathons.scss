@@ -1,3 +1,93 @@
 // Place all the styles related to the marathons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*===================================================*/
+/*                  MARATHON INDEX                   */
+/*===================================================*/
+
+span {
+  display: block;
+}
+
+.card {
+  height: 310px;
+}
+
+.card img {
+  height: 100%;
+}
+
+.card-img-wrapper {
+  height: 70%;
+  overflow: hidden;
+}
+.mara-card-info {
+  padding: 21px 15px;
+  height: 30%;
+}
+
+.card-name a{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-name a:hover{
+  background-color: rgba(0,0,0,0);
+  color: #17a2b8;
+  text-decoration: none;
+}
+
+/*===================================================*/
+/*                  MARATHON INFO                    */
+/*===================================================*/
+
+.mara-info img {
+  width: 100%;
+}
+
+.mara-info ul {
+  padding-top: 20px;
+}
+
+.mara-info li {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.mara-info span:nth-child(1){
+  padding-bottom: 6px;
+}
+
+.mara-info span {
+  font-size: 16px;
+}
+
+.mara-info p {
+  padding-bottom: 6px;
+}
+
+.detail {
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.fas.fa-chevron-left {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.back-btn a:hover {
+  background-color: rgba(0,0,0,0);
+  text-decoration: none;
+  color: #17a2b8;
+}
+
+.button_to input {
+
+  background-color: #17a2b8;
+  color: #fff;
+  padding: 6px 20px 8px 20px;
+  border-radius: 8px;
+}

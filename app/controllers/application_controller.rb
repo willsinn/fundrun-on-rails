@@ -14,19 +14,19 @@ class ApplicationController < ActionController::Base
   # end
 
   def current_user
-    user = User.find(session[:user_id])
-    if user
-      user
-    else
-      redirect_to login_path
-    end
+      if session[:user_id]
+        user = User.find(session[:user_id])
+      else
+        nil
+      end
   end
+  # redirect_to login_path
+  #
+  # def logged_in?
+  #   !!current_user
+  # end
 
-  def logged_in?
-    !!current_user
-  end
-  
   def authorized?
-    redirect_to login_path unless logged_in?
+    redirect_to login_path unless current_user
   end
 end

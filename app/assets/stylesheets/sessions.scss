@@ -1,3 +1,38 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.login-title {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.field_1 label{
+  padding-right: 47px;
+}
+
+.field_2 label {
+  padding-right: 20px;
+}
+
+.actions input {
+  background-color: #17a2b8;
+  color: #fff;
+  padding: 6px 15px 8px 15px;
+  border-radius: 5px;
+}
+
+.btn-wrapper {
+  width: 155px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.btn.btn-warning a{
+  color: #fff;
+}
+
+.btn.btn-warning a:hover {
+  text-decoration: none;
+}

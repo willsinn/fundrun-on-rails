@@ -9,5 +9,5 @@
   <%= button_to "Unfollow", unfollow_path, method: :delete%>
 <% else %>
   <%# byebug %>
-  <%= button_to "Follow", follow_path, method: :create%>
+  <%= button_to "Follow", follow_path, method: :post%>
 <% end %>
