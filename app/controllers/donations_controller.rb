@@ -1,11 +1,13 @@
 class DonationsController < ApplicationController
   def new
+    byebug
     @donation = Donation.new
+
   end
 
   def create
     @donation = Donation.create(donation_params)
-    redirect_to @donation
+    # redirect_to funds_index
   end
 
   private

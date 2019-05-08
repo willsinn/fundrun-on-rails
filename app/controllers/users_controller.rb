@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
      # @user = User.find(session[:user])
+     @marathon = Marathon.find_by(id: session[:user_id])
     @users = User.all
     @user = User.find_by(id: session[:user_id])
     @participations = Participation.all
