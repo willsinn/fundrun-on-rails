@@ -16,38 +16,6 @@
       </div>
     </div>
 
-    <div class="attending row">
-      <div class="container">
-        <div class="row attending-title">
-        </div>
-        <div class="row">
-
-            <% if flash[:notice] %>
-              <%= flash[:notice] %>
-            <%else%>
-              <h4>Attending Marathons</h4>
-            <%end%>
-
-              <%@user_participations.each do |user_participation|%>
-              <div class="col-sm-4">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title"><%= user_participation.marathon.name %></h5>
-                    <p class="card-text"><%=  user_participation.marathon.date %></p>
-                    <p class="card-text"><%=  user_participation.marathon.location %></p>
-                    <div class="view-btn">
-                      <button class="btn btn-warning">
-                        <%= link_to "View", marathon_path(user_participation.marathon.id)%>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          <%end%>
-        </div>
-      </div>
-    </div>
-
     <div class="donation row">
       <div class="container">
         <div class="row donation-title">
@@ -85,10 +53,32 @@
       </div>
     </div>
 
-<!-- DONATION TABLE NEED TO BE IMPLEMENTED -->
+    <div class="attending row">
+      <div class="container">
+        <div class="row attending-title">
+          <h4>Attending Marathons</h4>
+        </div>
+        <div class="row">
+          <%@user_participations.each do |user_participation|%>
+          <div class="col-sm-4 profile">
+            <div class="card">
+              <div class="card-body profile">
+                <h5 class="card-title"><%= user_participation.marathon.name %></h5>
+                <p class="card-text"><%=  user_participation.marathon.date %></p>
+                <p class="card-text"><%=  user_participation.marathon.location %></p>
+                <div class="view-btn">
+                  <button class="btn btn-warning">
+                    <%= link_to "View", marathon_path(user_participation.marathon.id)%>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%end%>
 
-
-
+        </div>
+      </div>
     </div>
+  </div>
   </div>
 </div>

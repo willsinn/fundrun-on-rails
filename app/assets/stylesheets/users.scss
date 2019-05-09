@@ -57,7 +57,7 @@
 }
 
 .attending.row {
-  background-color: #efefef;
+
   padding: 80px 0 100px 0;
 }
 
@@ -72,8 +72,11 @@
 
 }
 
+.profile.col-sm-4 {
+  padding-bottom: 20px;
+}
 .card {
-  height: 200px;
+  height: 220px;
 }
 
 .attending {
@@ -84,10 +87,27 @@
   margin: 0;
 }
 
-.view-btn {
-  text-align: right;
+.card-body.profile {
+  position: relative;
 }
 
+.view-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.view-btn a {
+  color: #17a2b8;
+}
+
+.view-btn.btn.btn-warning a:visited{
+  color: #fff;
+}
+
+.donation.row {
+  background-color: #fff7e6;
+}
 .donation.container {
   padding-top: 50px;
 }
@@ -96,6 +116,9 @@
   padding: 20px;
 }
 
+.table.table-hover {
+  background-color: #fff;
+}
 .user-edit {
   padding-top: 30px;
   display: flex;
