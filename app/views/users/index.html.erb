@@ -65,25 +65,22 @@
                 <th scope="col">Website</th>
               </tr>
             </thead>
+
+            <% donations_counter = 1 %>
+            <% @user_donations.each do |user_donation|%>
+            <%donation_fund = @funds.find_by(id: user_donation.fund_id)%>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+            <tr>
+                <th scope="row"><%="#{donations_counter}"%></th>
+                <td><%="#{donation_fund.name}"%></td>
+                <td><%="#{user_donation.amount}"%></td>
+                <td><%="#{donation_fund.site}"%></td>
               </tr>
             </tbody>
+
+            <%donations_counter+=1%>
+            <%end%>
+
           </table>
 
         </div>
@@ -97,4 +94,3 @@
     </div>
   </div>
 </div>
-

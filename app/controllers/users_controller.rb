@@ -3,16 +3,24 @@ class UsersController < ApplicationController
 
   def index
     @participations = Participation.all
+
+    @marathon = Marathon.find_by(id: session[:user_id])
+    @marathons = Marathon.all
+
+    @users = User.all
+    @user = User.find_by(id: session[:user_id])
+
+    #calling Donations to find all donations made by user
+    @funds = Fund.all
+    @donations = Donation.all
+    @user_donations = @donations.select {|donation| donation.user_id == session[:user_id]}
+
     # @participation = !!@participations.find_by(user_id: session[:user_id])
     # if @participation == false
     #   flash[:notice] = "You're not following any marathons!"
     #   render :index
     # else
      # @user = User.find(session[:user])
-     @marathon = Marathon.find_by(id: session[:user_id])
-    @users = User.all
-    @user = User.find_by(id: session[:user_id])
-    @marathons = Marathon.all
     # @marathon = @participation.marathon_id
   # end
   end
