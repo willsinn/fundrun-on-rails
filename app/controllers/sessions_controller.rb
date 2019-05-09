@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
     def destroy
       # byebug
       # User.find(session[:user_id]).destroy
+      reset_session
       session[:user_id] = nil
       redirect_to root_url, notice: "Logged out!"
     end
