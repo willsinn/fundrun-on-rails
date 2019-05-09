@@ -6,6 +6,34 @@
 /*                  MARATHON INDEX                   */
 /*===================================================*/
 
+.jumbotron.marathon {
+  position: relative;
+  background: #aaa url("https://media.defense.gov/2018/Sep/15/2001966641/-1/-1/0/180915-F-AV193-1001.JPG") no-repeat right center;
+  background-size: cover;
+  min-height: 250px;
+}
+
+.jumbotron-heading.title.marathon{
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -50px;
+}
+
+.jumbotron.marathon p {
+  width: 800px;
+  color: #fff;
+  z-index: 2000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 15px;
+  margin-left: -400px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 span {
   display: block;
 }
@@ -15,12 +43,14 @@ span {
 }
 
 .card img {
+  width: 100%;
   height: 100%;
 }
 
 .card-img-wrapper {
   height: 70%;
   overflow: hidden;
+  border-bottom: 1px solid #DFDFDF;
 }
 .mara-card-info {
   padding: 21px 15px;
@@ -33,9 +63,7 @@ span {
 }
 
 .card-name a:hover{
-  // background-color: rgba(0,0,0,0);
-  // color: #17a2b8;
-  // text-decoration: none;
+
 }
 
 /*===================================================*/

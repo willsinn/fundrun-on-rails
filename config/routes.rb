@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'sessions#new'
-  get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
+  get 'signup', to: 'users#new', as: 'signup'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   delete '/participations/:id', to: 'marathons#destroy', as:'unfollow'
   post '/marathons/:id', to: 'marathons#create', as: 'follow'
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :funds, except: [:create]
   resources :users, except: [:new]
   resources :sessions, only: [:new, :create]
-  resources :donations, except: [:create]
+  resources :donations
   resources :marathons
   resources :participations
 end

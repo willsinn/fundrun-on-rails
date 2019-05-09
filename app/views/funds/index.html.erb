@@ -2,13 +2,10 @@
 
   <section class="jumbotron text-center charity">
     <div class="container">
-      <h1 class="jumbotron-heading title">Run for a Charity!</h1>
+      <h1 class="jumbotron-heading title charity">Run for a Charity!</h1>
       <div class="c-d-btn-wrapper">
         <button class="btn btn-warning charity-btn"><%= link_to "Make a Donation", new_donation_path %></button>
       </div>
-      <% if flash[:notice] %>
-        <h1><%= flash[:notice] %></h1>
-      <%end%>
     </div>
       <div class="black"></div>
   </section>

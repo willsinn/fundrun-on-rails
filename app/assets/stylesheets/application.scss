@@ -57,6 +57,7 @@
 
 .navbar {
   background-color:#17a2b8;
+  z-index: 10000000;
 }
 
 .navbar-brand {
@@ -122,6 +123,6 @@
 
 .card a:hover {
   background-color: rgba(0,0,0,0);
-  color: #17a2b8;
+  color: #ffc30f;
   text-decoration: none;
 }
