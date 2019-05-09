@@ -2,7 +2,10 @@ class UsersController < ApplicationController
   skip_before_action :authorized?, only: [:new, :create]
 
   def index
+
     @participations = Participation.all
+    @user_participations = @participations.select {|participation| participation.user_id == session[:user_id]}
+    
     @marathons = Marathon.all
     @marathon = Marathon.find_by(id: session[:user_id])
 
@@ -13,8 +16,7 @@ class UsersController < ApplicationController
     @funds = Fund.all
     @donations = Donation.all
     @user_donations = @donations.select {|donation| donation.user_id == session[:user_id]}
-
-    if @participations == []
+    if @user_participations == []
       flash[:notice] = "You are currently not following any Marathons."
     end
     # @participation = !!@participations.find_by(user_id: session[:user_id])
@@ -34,6 +36,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+
   end
 
   def create
