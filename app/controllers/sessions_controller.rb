@@ -18,7 +18,8 @@ class SessionsController < ApplicationController
     def destroy
       # byebug
       # User.find(session[:user_id]).destroy
-      session[:user_id] = nil
+      reset_session
+      @current_user = nil
       redirect_to root_url, notice: "Logged out!"
     end
 end

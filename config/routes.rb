@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
   delete '/participations/:id', to: 'marathons#destroy', as:'unfollow'
   post '/marathons/:id', to: 'marathons#create', as: 'follow'
+  post '/donations/:id', to: 'donations#create', as: 'donate'
   get '/profile', to: 'users#index', as: 'profile'
 
 #   get 'marathon/view', to: 'marathon#show', as: 'view'
