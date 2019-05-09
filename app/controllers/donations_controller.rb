@@ -12,9 +12,8 @@ class DonationsController < ApplicationController
 
     @funds = Fund.all
     @fund = @funds.find_by(id: donate_fund_id)
-
-    redirect_to funds_path
     flash[:notice] = "Thank you for donating $#{donate_amount} to #{@fund.name}"
+    redirect_to funds_path
 
   end
 

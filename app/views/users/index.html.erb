@@ -28,16 +28,16 @@
               <h4>Attending Marathons</h4>
             <%end%>
 
-              <%@participations.each do |participation|%>
+              <%@user_participations.each do |user_participation|%>
               <div class="col-sm-4">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title"><%= participation.marathon.name %></h5>
-                    <p class="card-text"><%=  participation.marathon.date %></p>
-                    <p class="card-text"><%=  participation.marathon.location %></p>
+                    <h5 class="card-title"><%= user_participation.marathon.name %></h5>
+                    <p class="card-text"><%=  user_participation.marathon.date %></p>
+                    <p class="card-text"><%=  user_participation.marathon.location %></p>
                     <div class="view-btn">
                       <button class="btn btn-warning">
-                        <%= link_to "View", marathon_path(participation.marathon.id), method: :get %>
+                        <%= link_to "View", marathon_path(user_participation.marathon.id)%>
                       </button>
                     </div>
                   </div>
