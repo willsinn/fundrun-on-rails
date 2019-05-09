@@ -30,6 +30,7 @@ class ApplicationController < ActionController::Base
     # if signup_path == true
     #   redirect_to signup_path
     # end
+
     redirect_to login_path unless current_user
   end
 end

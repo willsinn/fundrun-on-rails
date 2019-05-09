@@ -1,3 +1,82 @@
 // Place all the styles related to the funds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.jumbotron.charity {
+  position: relative;
+  background: #aaa url("https://s3-eu-west-1.amazonaws.com/scottishhalfmarathon-com/media/2017/09/27105358/Scottish-Half-Marathon-2017-charity.jpg") no-repeat right center;
+  background-size: cover;
+  min-height: 250px;
+}
+.black {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,.6);
+  z-index: 0;
+}
+
+.jumbotron-heading.title.charity{
+  left: 50%;
+  top: 50%;
+  margin-left: -161px;
+  margin-top: -50px;
+}
+
+.container.charity-card {
+  min-height: 900px;
+}
+
+.c-d-btn-wrapper{
+  position: absolute;
+  left: 50%;
+  margin-left: -74px;
+  top: 50%;
+  margin-top: 0px;
+  z-index: 100;
+}
+
+.charity-btn {
+  margin-top: 20px;
+}
+
+.card.mb-4.c-card {
+  height: 390px;
+}
+
+.c-card-info{
+  width: 100%;
+  padding: 20px 20px;
+  height: 55%;
+}
+
+.c-card .card-img-wrapper {
+  padding: 30px 20px;
+  height: 45%;
+  border-bottom: 1px solid #DFDFDF;
+}
+.c-card img {
+  width: 100%;
+}
+
+.c-card .card-name {
+  padding-bottom: 10px;
+
+}
+
+.multiline-ellipsis {
+    display: block;
+    display: -webkit-box;
+    max-width: 400px;
+    height: 113px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.4;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
