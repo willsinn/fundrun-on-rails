@@ -1,11 +1,11 @@
 
-<main role="main" class="container">
+<main role="main" class="container m">
 
   <div class="starter-template">
     <h1 class="sub-title"><%= @marathon.name %></h1>
   </div>
   <div class="container">
-    <div class="row">
+    <div class="row marathon">
       <div class="mara-info">
         <img src="<%= @marathon.img_link %>" alt="">
         <ul>
@@ -23,16 +23,18 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="back-btn">
-      <a href="/marathons">
-        <i class="fas fa-chevron-left"> BACK</i>
-      </a>
-    </div>
+      <div class="m-btn-wrapper">
+        <button class="btn btn-warning marathon">
+          <a href="/marathons">
+            <i class="fas fa-chevron-left"> </i> Back to List
+          </a>
+        </button>
+        <div class="m-follow-btn">
 
-    <%= render "participations/button" %>
-    <!-- <button><%#= link_to "Back", marathons_path %></button> -->
-
+          <%= render "participations/button" %>
+        </div>
+      </div>
+    </div>
 
 
 
