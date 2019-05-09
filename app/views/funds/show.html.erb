@@ -5,5 +5,5 @@
 <p><%= @fund.description %></p>
 <h1><%= @fund_total %></h1>
 
-<button><%= link_to "Charities", funds_path %></button>
+<button><%= link_to "Charities", funds_path(charity_path) %></button>
 <button><%= link_to "Donate", new_donation_path %></button>
