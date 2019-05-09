@@ -4,7 +4,9 @@ class FundsController < ApplicationController
   end
 
   def show
+    @funds = Fund.all
     @fund = Fund.find(params[:id])
+
     @donations = Donation.all
     fund_donations = @donations.select {|donation| donation.fund_id == @fund.id}
     total_amount = 0
@@ -22,11 +24,4 @@ class FundsController < ApplicationController
   end
 
 
-
-  def create
-    byebug
-    # donate_fund_id = params.require(:id).to_i
-    # @donation = Donation.create(amount: 10, user_id: session[user_id], fund_id: donate_fund_id )
-
-  end
 end
