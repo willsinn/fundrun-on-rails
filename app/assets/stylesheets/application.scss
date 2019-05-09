@@ -106,9 +106,22 @@
   // padding-bottom: 40px;
   text-align: center;
   font-weight: bold;
+  color: #fff;
+  z-index: 100000;
+  position: absolute;
 }
 .sub-title {
   padding: 0 0 20px 0;
   font-weight: bold;
   text-align: center;
+}
+
+.card a:visited {
+  color: #007bff;
+}
+
+.card a:hover {
+  background-color: rgba(0,0,0,0);
+  color: #17a2b8;
+  text-decoration: none;
 }
