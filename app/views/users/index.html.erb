@@ -6,15 +6,56 @@
         <% if current_user %>
           <h1>Hello, <%= current_user.name.capitalize %>!</h1>
           Age :<%= current_user.age %>
-        <% else %>
-          <%= link_to "Sign up", signup_path %> or
-          <%= link_to "Log in", login_path %>
         <% end %>
 
         <p id='notice'><%= notice %></p>
         <%= button_to 'edit user', edit_user_path(current_user) , method: :get%>
       </div>
     </div>
+
+    <!-- DONATION TABLE NEED TO BE IMPLEMENTED -->
+
+
+        <div class="donation row">
+          <div class="container">
+            <div class="row donation-title">
+              <h4>Donation History</h4>
+            </div>
+            <div class="row">
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Charity</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Website</th>
+                  </tr>
+                </thead>
+
+                <% donations_counter = 1 %>
+                <% @user_donations.each do |user_donation|%>
+                <%donation_fund = @funds.find_by(id: user_donation.fund_id)%>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><%="#{donations_counter}"%></th>
+                        <td><%="#{donation_fund.name}"%></td>
+                        <td><%="#{user_donation.amount}"%></td>
+                        <td><%="#{donation_fund.site}"%></td>
+                      </tr>
+                    </tbody>
+                  <%donations_counter+=1%>
+                <%end%>
+
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
 
     <div class="attending row">
       <div class="container">
@@ -48,44 +89,6 @@
       </div>
     </div>
 
-    <div class="donation row">
-      <div class="container">
-        <div class="row donation-title">
-          <h4>Donation History</h4>
-        </div>
-        <div class="row">
-
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Charity</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Website</th>
-              </tr>
-            </thead>
-
-            <% donations_counter = 1 %>
-            <% @user_donations.each do |user_donation|%>
-            <%donation_fund = @funds.find_by(id: user_donation.fund_id)%>
-                <tbody>
-                  <tr>
-                    <th scope="row"><%="#{donations_counter}"%></th>
-                    <td><%="#{donation_fund.name}"%></td>
-                    <td><%="#{user_donation.amount}"%></td>
-                    <td><%="#{donation_fund.site}"%></td>
-                  </tr>
-                </tbody>
-              <%donations_counter+=1%>
-            <%end%>
-
-          </table>
-
-        </div>
-      </div>
-    </div>
-
-<!-- DONATION TABLE NEED TO BE IMPLEMENTED -->
 
 
 

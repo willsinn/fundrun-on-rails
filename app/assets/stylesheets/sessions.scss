@@ -5,19 +5,31 @@
 /*===================================================*/
 /*                            LOGIN                  */
 /*===================================================*/
+.login-background {
+  height: 900px;
+  width: 100%;
+  background: url(https://wallpaperplay.com/walls/full/4/4/6/216150.jpg) center;
+  background-size: cover;
+  // opacity: 0.7;
+}
 
 .login-title {
   padding-top: 20px;
   padding-bottom: 30px;
   text-align: center;
+  font-weight: bold;
+
 }
 
 .field_1 label{
   padding-right: 47px;
+  font-weight: bold;
 }
 
 .field_2 label {
   padding-right: 20px;
+  font-weight: bold;
+
 }
 
 .actions input {
