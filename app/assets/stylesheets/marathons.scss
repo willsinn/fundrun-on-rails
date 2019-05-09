@@ -101,6 +101,7 @@ span {
 
 .mara-info span {
   font-size: 16px;
+  line-height: 1.6;
 }
 
 .mara-info p {
@@ -118,15 +119,10 @@ span {
   font-weight: bold;
 }
 
-// .back-btn a:hover {
-//   background-color: rgba(0,0,0,0);
-//   text-decoration: none;
-//   color: #17a2b8;
-// }
 .m-btn-wrapper {
   position: absolute;
   right: 0;
-  bottom: -40px;
+  bottom: -50px;
 }
 
 .btn.btn-warning.marathon{
