@@ -11,6 +11,7 @@
   background: #aaa url("https://media.defense.gov/2018/Sep/15/2001966641/-1/-1/0/180915-F-AV193-1001.JPG") no-repeat right center;
   background-size: cover;
   min-height: 250px;
+  margin-bottom: 0;
 }
 
 .jumbotron-heading.title.marathon{
@@ -34,6 +35,9 @@
   line-height: 1.6;
 }
 
+.container.marathon {
+  padding-top: 50px;
+}
 span {
   display: block;
 }
@@ -71,16 +75,27 @@ span {
 /*===================================================*/
 
 .starter-template {
+  padding: 0;
+}
+
+.container.mara-info.m1{
   padding-top: 100px;
 }
 
-.container.m {
+.container.mara-info.m2 {
   padding-bottom: 100px;
-}
-
-.row.marathon {
+  padding-top: 0;
   position: relative;
 }
+//
+// .container.m-2{
+//   padding-top: 0;
+// }
+
+.row.marathon {
+
+}
+
 
 .mara-info img {
   width: 100%;
@@ -122,7 +137,7 @@ span {
 .m-btn-wrapper {
   position: absolute;
   right: 0;
-  bottom: -50px;
+  bottom: 50px;
 }
 
 .btn.btn-warning.marathon{
