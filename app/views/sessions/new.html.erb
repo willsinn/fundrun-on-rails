@@ -1,4 +1,7 @@
-
+<div class="login-background">
+  <div class="black">
+    back
+  </div>
 <div class="form-wrapper">
   <div class="form-cont-wrapper">
     <p id="alert"><%= alert %></p>
@@ -17,10 +20,11 @@
         <div class="btn-wrapper">
           <%= submit_tag "Login" %>
           <button class="btn btn-warning">
-            <%= link_to "Signup", signup_path %>
+            <%= link_to "Signup", signup_path, method: :get%>
           </button>
         </div>
       </div>
     <% end %>
+    </div>
   </div>
 </div>

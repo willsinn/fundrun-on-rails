@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :funds, except: [:create]
   resources :users, except: [:new]
   resources :sessions, only: [:new, :create]
-  resources :donations, except: [:create]
+  resources :donations
   resources :marathons
   resources :participations
 end

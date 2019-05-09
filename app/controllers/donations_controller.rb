@@ -1,5 +1,6 @@
 class DonationsController < ApplicationController
   def new
+    # byebug
     @donation = Donation.new
   end
 
