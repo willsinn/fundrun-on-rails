@@ -2,19 +2,45 @@
 
   <div class="profile-conts-wrapper">
     <div class="flex-container row">
-      <div>
+      <div class="user">
         <% if current_user %>
           <h1>Hello, <%= current_user.name.capitalize %>!</h1>
-          Age :<%= current_user.age %>
+          <span>Age :<%= current_user.age %></span>
         <% end %>
 
         <p id='notice'><%= notice %></p>
         <%= button_to 'edit user', edit_user_path(current_user) , method: :get%>
       </div>
+      <div class="black"></div>
+    </div>
+    <div class="attending row">
+      <div class="container profile">
+        <div class="row attending-title">
+          <h4>Attending Marathons</h4>
+        </div>
+        <div class="row">
+          <%@user_participations.each do |user_participation|%>
+          <div class="col-sm-4 profile">
+            <div class="card">
+              <div class="card-body profile">
+                <h5 class="card-title"><%= user_participation.marathon.name %></h5>
+                <p class="card-text"><%=  user_participation.marathon.date %></p>
+                <p class="card-text"><%=  user_participation.marathon.location %></p>
+                <div class="view-btn">
+                  <button class="btn btn-warning">
+                    <%= link_to "View", marathon_path(user_participation.marathon.id)%>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%end%>
+        </div>
+      </div>
     </div>
 
     <div class="donation row">
-      <div class="container">
+      <div class="container profile">
         <div class="row donation-title">
           <h4>Donation History</h4>
         </div>
@@ -49,34 +75,7 @@
         </div>
       </div>
     </div>
-    <div class="attending row">
-      <div class="container">
-        <div class="row attending-title">
 
-          <h4>Attending Marathons</h4>
-        </div>
-        <div class="row">
-          <%@user_participations.each do |user_participation|%>
-          <div class="col-sm-4 profile">
-            <div class="card">
-              <div class="card-body profile">
-                <h5 class="card-title"><%= user_participation.marathon.name %></h5>
-                <p class="card-text"><%=  user_participation.marathon.date %></p>
-                <p class="card-text"><%=  user_participation.marathon.location %></p>
-                <div class="view-btn">
-                  <button class="btn btn-warning">
-                    <%= link_to "View", marathon_path(user_participation.marathon.id)%>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <%end%>
-
-
-        </div>
-      </div>
-    </div>
   </div>
   </div>
 </div>
