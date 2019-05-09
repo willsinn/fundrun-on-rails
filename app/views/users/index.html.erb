@@ -6,9 +6,6 @@
         <% if current_user %>
           <h1>Hello, <%= current_user.name.capitalize %>!</h1>
           Age :<%= current_user.age %>
-        <% else %>
-          <%= link_to "Sign up", signup_path %> or
-          <%= link_to "Log in", login_path %>
         <% end %>
 
         <p id='notice'><%= notice %></p>
@@ -52,10 +49,10 @@
         </div>
       </div>
     </div>
-
     <div class="attending row">
       <div class="container">
         <div class="row attending-title">
+
           <h4>Attending Marathons</h4>
         </div>
         <div class="row">
@@ -75,6 +72,7 @@
             </div>
           </div>
           <%end%>
+
 
         </div>
       </div>

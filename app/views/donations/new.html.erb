@@ -1,9 +1,24 @@
-<h1>Make a Donation</h1>
+<div class="container">
+  <div class="form-container-wrapper">
+    <div class="form-container">
+      <h1> <%=" Donate to a cause! "%> </h1>
 
-<%= form_for @donation do |f| %>
-  <%= f.label :charity %>
-  <%= f.collection_select(:fund_id, Fund.all, :id, :name) %>
-  <%= f.label :amount %>
-  <%= f.number_field :amount %>
-  <%= f.submit :Donate %>
-<% end %>
+      <%= form_for @donation do |f| %>
+        <div class="inputs-wrapper">
+          <div class="amount-wrapper">
+            <div class="donation-label"><%= f.label :amount %></div>
+            <div class="form-input"><%= f.number_field :amount %></div>
+          </div>
+          <div class="charity-wrapper">
+            <div class="donation-label"><%= f.label :charity %></div>
+            <div class="charity-input"><%= f.collection_select(:fund_id, Fund.all, :id, :name) %></div>
+          </div>
+        </div>
+        <div class="buttons-wrapper">
+          <div class="actions donate-input"><%= f.submit :Donate %></div>
+          <div><button class="btn btn-warning"><%= link_to "Back", funds_path %></button></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<div>

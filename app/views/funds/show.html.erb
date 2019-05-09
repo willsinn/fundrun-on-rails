@@ -1,6 +1,9 @@
 <h1><%= @fund.name %></h1>
-
+<% if flash[:notice] %>
+  <h1><%= flash[:notice] %></h1>
+<%end%>
 <p><%= @fund.description %></p>
+<h1><%= @fund_total %></h1>
 
 <button><%= link_to "Charities", funds_path %></button>
-<button><%= link_to "Donate", donate_path %></button>
+<button><%= link_to "Donate", new_donation_path %></button>

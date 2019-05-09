@@ -1,3 +1,62 @@
 // Place all the styles related to the donations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+}
+.form-container h1 {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+.form-container-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.inputs-wrapper {
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 12px;
+  background-color:  #fff7e6;
+  border: 1px dotted #17a2ba;
+
+}
+.charity-wrapper {
+  display: flex;
+  padding-top: 8px;
+}
+.amount-wrapper {
+  display: flex;
+  padding-top: 48px;
+
+}
+.donation-label {
+  padding-right: 30px;
+}
+.form-label-amt {
+
+}
+.form-input {
+  display: flex;
+  width: 298px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.back-button {
+
+}
+.form-button input {
+}
+.actions.donate-input {
+  padding-right:7.5px;
+}
