@@ -19,32 +19,31 @@
     <div class="attending row">
       <div class="container">
         <div class="row attending-title">
-          <h4>Attending Marathons</h4>
         </div>
         <div class="row">
 
-          <% if flash[:notice] %>
-            <%= flash[:notice] %>
-          <% else %>
+            <% if flash[:notice] %>
+              <%= flash[:notice] %>
+            <%else%>
+              <h4>Attending Marathons</h4>
+            <%end%>
 
-
-          <%@participations.each do |participation|%>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title"><%= participation.marathon.name%></h5>
-                <p class="card-text"><%=  participation.marathon.date %></p>
-                <p class="card-text"><%=  participation.marathon.location %></p>
-                <div class="view-btn">
-                  <button class="btn btn-warning">
-                    <%= link_to "View", marathon_path(participation.marathon.id), method: :get %>
-                  </button>
+              <%@participations.each do |participation|%>
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= participation.marathon.name %></h5>
+                    <p class="card-text"><%=  participation.marathon.date %></p>
+                    <p class="card-text"><%=  participation.marathon.location %></p>
+                    <div class="view-btn">
+                      <button class="btn btn-warning">
+                        <%= link_to "View", marathon_path(participation.marathon.id), method: :get %>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
           <%end%>
-          <% end %>
         </div>
       </div>
     </div>
@@ -69,16 +68,15 @@
             <% donations_counter = 1 %>
             <% @user_donations.each do |user_donation|%>
             <%donation_fund = @funds.find_by(id: user_donation.fund_id)%>
-            <tbody>
-            <tr>
-                <th scope="row"><%="#{donations_counter}"%></th>
-                <td><%="#{donation_fund.name}"%></td>
-                <td><%="#{user_donation.amount}"%></td>
-                <td><%="#{donation_fund.site}"%></td>
-              </tr>
-            </tbody>
-
-            <%donations_counter+=1%>
+                <tbody>
+                  <tr>
+                    <th scope="row"><%="#{donations_counter}"%></th>
+                    <td><%="#{donation_fund.name}"%></td>
+                    <td><%="#{user_donation.amount}"%></td>
+                    <td><%="#{donation_fund.site}"%></td>
+                  </tr>
+                </tbody>
+              <%donations_counter+=1%>
             <%end%>
 
           </table>

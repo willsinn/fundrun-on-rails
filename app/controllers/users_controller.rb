@@ -3,9 +3,8 @@ class UsersController < ApplicationController
 
   def index
     @participations = Participation.all
-
-    @marathon = Marathon.find_by(id: session[:user_id])
     @marathons = Marathon.all
+    @marathon = Marathon.find_by(id: session[:user_id])
 
     @users = User.all
     @user = User.find_by(id: session[:user_id])
@@ -15,6 +14,9 @@ class UsersController < ApplicationController
     @donations = Donation.all
     @user_donations = @donations.select {|donation| donation.user_id == session[:user_id]}
 
+    if @participations == []
+      flash[:notice] = "You are currently not following any Marathons."
+    end
     # @participation = !!@participations.find_by(user_id: session[:user_id])
     # if @participation == false
     #   flash[:notice] = "You're not following any marathons!"
