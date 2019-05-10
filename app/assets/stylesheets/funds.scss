@@ -8,6 +8,7 @@
   background: #aaa url("https://s3-eu-west-1.amazonaws.com/scottishhalfmarathon-com/media/2017/09/27105358/Scottish-Half-Marathon-2017-charity.jpg") no-repeat right center;
   background-size: cover;
   min-height: 250px;
+  margin-bottom: 0;
 }
 .black {
   width: 100%;
@@ -28,6 +29,7 @@
 
 .container.charity-card {
   min-height: 900px;
+  padding-top: 50px;
 }
 
 .c-d-btn-wrapper{
@@ -54,7 +56,7 @@
 }
 
 .c-card .card-img-wrapper {
-  padding: 30px 20px;
+  padding: 30px 40px;
   height: 45%;
   border-bottom: 1px solid #DFDFDF;
 }
