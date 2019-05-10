@@ -13,24 +13,29 @@
     <div class="fund-logo-wrapper">
         <img class="fund-logo-box" src="<%= @fund.img_link %>"/>
     </div>
-    <div class="fund-box name">
-        <span class="fund-info-label"> CHARITY  </span>
-        <span class="fund-info-content"><%= @fund.name %></span>
-    </div>
-    <div class="fund-box site">
-        <span class="fund-info-label"> WEBSITE  </span>
-        <span class="fund-info-content">LINK: <%=link_to "#{@fund.name}", @fund.site %></span>
-    </div>
-    <div class="fund-box description">
-      <span class="fund-info-label"> DESCRIPTION  </span>
-      <span class="fund-info-content"><%= @fund.description %></span>
-    </div>
-    <div class="fund-box-button-wrapper">
-      <div class="button-funds-path">
-        <button class="btn btn-warning fund"><%= link_to "Charities", funds_path %></button>
-      </div>
-      <div class="button-donate-path">
-        <button class="btn btn-info fund"><%= link_to "Donate", new_donation_path %></button>
+    <div class="fund-box-wrapper">
+      <div class="fund-cont-wrapper">
+
+        <div class="fund-box name">
+          <span class="fund-info-label"> CHARITY  </span>
+          <span class="fund-info-content"><%= @fund.name %></span>
+        </div>
+        <div class="fund-box site">
+          <span class="fund-info-label"> WEBSITE  </span>
+          <span class="fund-info-content">LINK: <%=link_to "#{@fund.name}", @fund.site %></span>
+        </div>
+        <div class="fund-box description">
+          <span class="fund-info-label"> DESCRIPTION  </span>
+          <span class="fund-info-content"><%= @fund.description %></span>
+        </div>
+        <div class="fund-box-button-wrapper">
+          <div class="button-funds-path">
+            <button class="btn btn-warning fund"><%= link_to "Charities", funds_path %></button>
+          </div>
+          <div class="button-donate-path">
+            <button class="btn btn-info fund"><%= link_to "Donate", new_donation_path %></button>
+          </div>
+        </div>
       </div>
     </div>
 

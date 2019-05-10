@@ -56,7 +56,7 @@
 }
 
 .c-card .card-img-wrapper {
-  padding: 30px 40px;
+  padding: 40px 75px;
   height: 45%;
   border-bottom: 1px solid #DFDFDF;
 }
@@ -96,6 +96,27 @@
 }
 .fund-box {
 }
+
+.fund-box-wrapper{
+  margin-top: 50px;
+  border: 1px #17a2b8 solid;
+  border-radius: 10px;
+}
+
+.fund-cont-wrapper{
+  margin: 0 30px 30px 30px;
+}
+
+.fund-info-content a:visited{
+  color: #007bff;
+}
+
+.fund-info-content a:hover{
+  color: #ffc107;
+  text-decoration: none;
+  background: rgba(0,0,0,0)
+}
+
 .fund-logo-wrapper {
   width: 80%;
   height: 80%;
@@ -147,7 +168,7 @@
 .fund-box-button-wrapper {
   display: flex;
   justify-content: center;
-  padding-top: 25px;
+  padding-top: 35px;
 }
 
 .btn.btn-warning.fund {

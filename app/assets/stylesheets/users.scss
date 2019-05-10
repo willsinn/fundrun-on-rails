@@ -54,12 +54,17 @@
 
 .flex-container.row {
   position: relative;
-  height: 350px;
-  padding: 100px 0;
-  background: #aaa url(https://www.coloursofnature.com/wp-content/uploads/2017/01/runninghabit.jpg) no-repeat center;
-  background-size: cover;
+  height: 420px;
+  padding: 0;
+  // background: #aaa url(https://www.coloursofnature.com/wp-content/uploads/2017/01/runninghabit.jpg) no-repeat center;
+  // background-size: cover;
 }
 
+.flex-container.row img{
+  width: 100%;
+  height: inherit;
+
+}
 .user {
   position: absolute;
   color: #fff;
