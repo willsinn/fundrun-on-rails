@@ -82,3 +82,103 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.fund-show-container {
+  display: flex;
+  justify-content: center;
+}
+.fund-show-box {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+.fund-box {
+}
+.fund-logo-wrapper {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.fund-logo-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+
+}
+.fund-info-label {
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 25px;
+}
+.fund-info-content {
+  font-size: 16px;
+  padding-top: 7.5px;
+}
+.charity-donations-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+}
+.fund-name-box {
+
+}
+.fund-desc-box {
+
+}
+.charity-don-number {
+  font-size: 24px;
+  line-height: 2.2;
+  font-weight: bold;
+  padding-left: 5px;
+
+}
+.charity-don-label {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 2.2;
+
+
+}
+.fund-box-button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.btn.btn-warning.fund {
+
+}
+
+.btn.btn-info.fund a:visited{
+  color:white;
+}
+
+.btn.btn-info.fund a:hover{
+  text-decoration:none;
+  background-color: rgba(0,0,0,0);
+}
+
+.btn.btn-info.fund {
+
+}
+.button-funds-path {
+  padding-right: 8px;
+
+}
+.button-donate-path {
+  padding-left: 8px;
+
+}
+.jumbotron.jumbotron-fluid.funds {
+  border-radius: 8px;
+  height: inherit;
+}
+.container-funds {
+  padding: 0;
+
+}

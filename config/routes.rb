@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post '/marathons/:id', to: 'marathons#create', as: 'follow'
   post '/donations/:id', to: 'donations#create', as: 'donate'
   get '/profile', to: 'users#index', as: 'profile'
-  # get '/fund/:id', to: 'funds#show', as: 'charity'
+
 
 #   get 'marathon/view', to: 'marathon#show', as: 'view'
   # post '/participations/create', to: 'participations#create', as: 'new_participation'
