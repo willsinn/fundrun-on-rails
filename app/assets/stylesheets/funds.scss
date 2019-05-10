@@ -89,17 +89,24 @@
   display: flex;
   flex-direction: column;
   width: 40%;
-  padding-top: 150px;
+  padding-top: 70px;
+  padding-bottom: 100px;
 }
 .fund-box {
 }
 .fund-logo-wrapper {
-  width: 200px;
-  height: 200px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 .fund-logo-box {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-self: center;
+
 }
 .fund-info-label {
   font-weight: bold;
@@ -141,11 +148,35 @@
   padding-top: 25px;
 }
 
+.btn.btn-warning.fund {
+
+}
+
+.btn.btn-info.fund a:visited{
+  color:white;
+}
+
+.btn.btn-info.fund a:hover{
+  text-decoration:none;
+  background-color: rgba(0,0,0,0);
+}
+
+.btn.btn-info.fund {
+
+}
 .button-funds-path {
   padding-right: 8px;
 
 }
 .button-donate-path {
   padding-left: 8px;
+
+}
+.jumbotron.jumbotron-fluid.funds {
+  border-radius: 8px;
+  height: inherit;
+}
+.container-funds {
+  padding: 0;
 
 }
