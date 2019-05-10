@@ -2,12 +2,13 @@
 
   <div class="profile-conts-wrapper">
     <div class="flex-container row">
+      <%#= image_tag("https://drive.google.com/file/d/1AUrxzP--6zNdftvbt1vhSSpU8H5Q3ZOa/view") %>
+      <img src="https://previews.dropbox.com/p/thumb/AAYfmOuyLYi5GW79JfcKiYO_fQV_GTWiszavyitpT6YqKeMCRy1G0-GirtExhClXWl_sS3WjjGyR7J_mvfS9AJdGIkCgs-SkCrsYvo4QWCBjJ_pPc7LSfh-dqHu4P4o9TQH0JlXJlNk-9cOiOH-CsRjzittfBMWXi0N2NV2ArVdOQUFYAN-F9UwYpScAbzDDBTWKMcqxUZgzhzru34uagf9fxH-irRSVzLqZks2Lpnemas_OjY7XlbdZqsTDRrZU7yR8H6ZGNBgMEP2EQBPCWJ9WG_AC_J_hzmVz7qiCeoyKlJC98Kbf0giu9BSrt9lD1ZYnA2dOr14ZZLs1GtLmr-Xa/p.jpeg?fv_content=true&size_mode=5" alt="" />
       <div class="user">
-        <% if current_user %>
+        <%# if current_user %>
           <h1>Hello, <%= current_user.name.capitalize %>!</h1>
           <span>Age :<%= current_user.age %></span>
-        <% end %>
-    <%  %>
+        <%# end %>
         <p id='notice'><%= notice %></p>
         <%= button_to 'edit user', edit_user_path(current_user) , method: :get%>
       </div>
