@@ -9,7 +9,7 @@ class FundsController < ApplicationController
     fund_donations = @donations.select {|donation| donation.fund_id == @fund.id}
     total_amount = 0
 
-    if fund_donations.length >= 1
+    if fund_donations.length >= 0
     fund_donations.each do |fund_donation|
       amt = fund_donation.amount
       total_amount+=amt
@@ -19,6 +19,7 @@ class FundsController < ApplicationController
       total_amount = fund_donation.amount
     end
     @fund_total = total_amount
+
   end
 
 

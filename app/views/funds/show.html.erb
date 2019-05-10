@@ -1,9 +1,36 @@
-<h1><%= @fund.name %></h1>
-<% if flash[:notice] %>
-  <h1><%= flash[:notice] %></h1>
-<%end%>
-<p><%= @fund.description %></p>
-<h1><%= @fund_total %></h1>
 
-<button><%= link_to "Charities", funds_path %></button>
-<button><%= link_to "Donate", new_donation_path %></button>
+<div class="fund-show-container">
+  <div class="fund-show-box">
+      <% if flash[:notice] %>
+        <%= flash[:notice] %>
+      <%end%>
+    <div class="charity-donations-wrapper">
+        <div class="charity-don-label"> Charity totals: </div>
+        <div class="charity-don-number">$ <%= number_with_delimiter(@fund_total, :delimiter => ',') %> </div>
+    </div>
+    <div class="fund-logo-wrapper">
+        <img class="fund-logo-box" src="<%= @fund.img_link %>"/>
+    </div>
+    <div class="fund-box name">
+        <span class="fund-info-label"> CHARITY  </span>
+        <span class="fund-info-content"><%= @fund.name %></span>
+    </div>
+    <div class="fund-box site">
+        <span class="fund-info-label"> WEBSITE  </span>
+        <span class="fund-info-content"><%= @fund.site %></span>
+    </div>
+    <div class="fund-box description">
+      <span class="fund-info-label"> DESCRIPTION  </span>
+      <span class="fund-info-content"><%= @fund.description %></span>
+    </div>
+    <div class="fund-box-button-wrapper">
+      <div class="button-funds-path">
+        <button><%= link_to "Charities", funds_path %></button>
+      </div>
+      <div class="button-donate-path">
+        <button><%= link_to "Donate", new_donation_path %></button>
+      </div>
+    </div>
+
+  </div>
+</div>
