@@ -3,6 +3,7 @@ class DonationsController < ApplicationController
     # byebug
     @donation = Donation.new
   end
+  # comment
 
   def create
     donate = params.require(:donation).permit(:amount, :fund_id)
