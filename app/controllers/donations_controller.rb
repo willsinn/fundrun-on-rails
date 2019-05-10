@@ -17,7 +17,7 @@ class DonationsController < ApplicationController
 
     redirect_to @fund
 
-    flash[:notice] = "Thank you for your contribution of $#{donate_amount} to charity:#{@fund.name}"
+    flash[:notice] = "Thank you for donating $#{donate_amount}!"
 
 
 

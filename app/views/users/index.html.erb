@@ -9,8 +9,8 @@
           <h1>Hello, <%= current_user.name.capitalize %>!</h1>
           <span>Age :<%= current_user.age %></span>
         <%# end %>
-        <p id='notice'><%= notice %></p>
         <%= button_to 'edit user', edit_user_path(current_user) , method: :get%>
+        <p id='notice' class="notice-profile"><%= notice %></p>
       </div>
       <div class="black"></div>
     </div>

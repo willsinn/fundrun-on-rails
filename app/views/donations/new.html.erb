@@ -15,8 +15,16 @@
           </div>
         </div>
         <div class="buttons-wrapper">
+          <div>
+            <button class="btn btn-warning">
+              <a href="/funds">
+
+                <i class="fas fa-chevron-left"> </i> Back to List
+              </a>
+              <%#= link_to "Back", funds_path %>
+            </button>
+          </div>
           <div class="actions donate-input"><%= f.submit :Donate %></div>
-          <div><button class="btn btn-warning"><%= link_to "Back", funds_path %></button></div>
         </div>
       <% end %>
     </div>
